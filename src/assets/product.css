@@ -1,0 +1,67 @@
+.product-content {
+    padding: 100px 16px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+.product-list {
+    height: 100%;
+}
+.product-form {
+    background-color: blue;
+}
+.search-box {
+    position: relative;
+    background-color: #ffffff;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25); 
+}
+.search-box > input {
+    width: 100%;
+    padding: .8em 5rem;
+    outline: 0;
+    font-size: 1rem;
+    border: none;
+}
+.search-box > input:focus:valid ~ .svg-search,
+.search-box > input:focus ~ .svg-search {
+    pointer-events: all;
+    cursor: pointer;
+    transform: translateX(500px)
+}
+.search-box .svg-search {
+    position: absolute;
+    pointer-events: none;
+    bottom: 25%;
+    transition: 1s;
+    left: 5%;
+}
+.product-list .list-box {
+    background-color: #252525;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25); 
+}
+.product-item {
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25); 
+    background-color: #3D3D3D;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: .8rem 1rem;
+}
+.product-item:hover {
+    background-color: #858585;
+}
+.product-item > span {
+    color: #ffffff;
+}
