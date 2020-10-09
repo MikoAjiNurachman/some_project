@@ -6,38 +6,40 @@
     min-height: 100vh;
 }
 .login-box {
-    min-width: 50vh;
+    width: 90%;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    min-height: 50vh;
-    padding: 10px;
+    padding: 50px 50px;
+    max-height: 600px;
     background-color: #ffffff;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .login-form {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    background-color: red;
     flex-direction: column;
+    width: 100%;
+    height: 400px;
 }
 .form-group-center {
-    margin-top: 40px;
+    width: 100%;
     position: relative;
 }
 .form-group-center > label {
     position: absolute;
     pointer-events: none;
-    transition: .3s ease-in-out;
+    transition: .3s;
     left: 0;
 }
 .form-group-center > input {
+    width: 100%;
     border: none;
     outline: none;
-    width: 100%;
+    padding: 4px 0;
     border-bottom: 1px solid #898989;
 }
 .form-group-center > input:valid ~label, 

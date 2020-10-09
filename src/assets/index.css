@@ -7,3 +7,27 @@
 body {
     background-color: #e6e6e6;
 }
+.brand {
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-size: 36px;
+}
+.brand > span {
+    color: #ffb800;
+} 
+.btn-primary {
+    background-color: #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    width: 12em;
+    outline: none;
+    border: none;
+    height: 3em;
+}
+.btn-primary:hover {
+    background-color: #3b99ff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}

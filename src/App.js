@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter} from 'react-router-dom'
-import Login from './Login';
+// import Login from './Login';
+import Register from './Register';
 // import Headers from './templates/headers'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <BrowserRouter>
     {/* <Headers/> */}
     <div className="container">
-      <Login/>
+      {/* <Login/> */}
+      <Register/>
     </div>
     </BrowserRouter>
   );
