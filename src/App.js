@@ -1,12 +1,14 @@
 import React from 'react';
 import {BrowserRouter} from 'react-router-dom'
-import Headers from './templates/headers'
+import Login from './Login';
+// import Headers from './templates/headers'
 
 function App() {
   return (
     <BrowserRouter>
+    {/* <Headers/> */}
     <div className="container">
-        <Headers/>
+      <Login/>
     </div>
     </BrowserRouter>
   );
