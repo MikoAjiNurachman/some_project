@@ -73,10 +73,11 @@
 }
 .half-group-left {
     display: flex;
-    width: 90%;
+    width: 74%;
 }
 .form-group-left > select {
     padding: 0.4em 1.5em;
+    width: 90%;
     outline: 0;
 }
 .center-register {
