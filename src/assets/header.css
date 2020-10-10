@@ -3,6 +3,7 @@
     background-color: #1c1b1b;
     min-width: 100%;
     height: 5rem;
+    z-index: 20;
     display: flex;
     justify-content: space-between;
 }

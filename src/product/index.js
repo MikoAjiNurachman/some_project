@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Headers from './../templates/headers'
 import './../assets/product.css'
 
 export default function Index() {
+    const [modal,setModal] = useState(false)
     return (
         <>
             <Headers/>
@@ -16,66 +17,153 @@ export default function Index() {
                             </svg>
                         </div>
                     </form>
-                    <div className="list-box">
-                        <div className="product-item">
-                            <span>4X5X160G</span>
-                            <span>Delux Cookies Cream CHO</span>
-                            <span>Snack</span>
-                            <span>2020-7-10</span>
-                            <span>Active</span>
-                            <span>IDR. 150.000.00</span>
+                    <div className="list-box-container">
+                        <div className="list-box">
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
+                            <div className="product-item">
+                                <span>Product Code</span>
+                                <span>Product Name</span>
+                                <span>Packaging</span>
+                            </div>
                         </div>
-                        <div className="product-item">
-                            <span>4X5X160G</span>
-                            <span>Delux Cookies Cream CHO</span>
-                            <span>Snack</span>
-                            <span>2020-7-10</span>
-                            <span>Active</span>
-                            <span>IDR. 150.000.00</span>
-                        </div>
-                        <div className="product-item">
-                            <span>4X5X160G</span>
-                            <span>Delux Cookies Cream CHO</span>
-                            <span>Snack</span>
-                            <span>2020-7-10</span>
-                            <span>Active</span>
-                            <span>IDR. 150.000.00</span>
-                        </div>
-                        <div className="product-item">
-                            <span>4X5X160G</span>
-                            <span>Delux Cookies Cream CHO</span>
-                            <span>Snack</span>
-                            <span>2020-7-10</span>
-                            <span>Active</span>
-                            <span>IDR. 150.000.00</span>
-                        </div>
-                        <div className="product-item">
-                            <span>4X5X160G</span>
-                            <span>Delux Cookies Cream CHO</span>
-                            <span>Snack</span>
-                            <span>2020-7-10</span>
-                            <span>Active</span>
-                            <span>IDR. 150.000.00</span>
-                        </div>
-                        <div className="product-item">
-                            <span>4X5X160G</span>
-                            <span>Delux Cookies Cream CHO</span>
-                            <span>Snack</span>
-                            <span>2020-7-10</span>
-                            <span>Active</span>
-                            <span>IDR. 150.000.00</span>
-                        </div>
-                        
                     </div>
                 </div>
                 <div className="product-form">
                     <div className="button-form">
-
+                        <button onClick={() => setModal((prevState => !prevState))} className="add-category">Add Category</button>
+                        <i className="export">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0ZM39.0625 33.5938C39.0625 36.1784 36.9597 38.2812 34.375 38.2812H17.1875C14.6028 38.2812 12.5 36.1784 12.5 33.5938V16.4062C12.5 13.8216 14.6028 11.7188 17.1875 11.7188H25C25.8629 11.7188 26.5625 12.4184 26.5625 13.2812C26.5625 14.1441 25.8629 14.8438 25 14.8438H17.1875C16.326 14.8438 15.625 15.5447 15.625 16.4062V33.5938C15.625 34.4553 16.326 35.1562 17.1875 35.1562H34.375C35.2365 35.1562 35.9375 34.4553 35.9375 33.5938V25.7812C35.9375 24.9184 36.6371 24.2188 37.5 24.2188C38.3629 24.2188 39.0625 24.9184 39.0625 25.7812V33.5938ZM38.9117 17.0725C38.7475 17.4205 38.8043 17.3115 35.4798 20.6361C35.1747 20.9412 34.7749 21.0938 34.375 21.0938C32.9955 21.0938 32.2831 19.4135 33.2702 18.4265L33.6966 18.0001C29.7054 18.3453 26.5625 21.7021 26.5625 25.7812C26.5625 26.6441 25.8629 27.3438 25 27.3438C24.1371 27.3438 23.4375 26.6441 23.4375 25.7812C23.4375 19.9613 28.0068 15.1892 33.7463 14.8622L33.2701 14.386C32.6599 13.7759 32.6599 12.7865 33.2701 12.1764C33.8803 11.5661 34.8696 11.5661 35.4798 12.1764C38.875 15.5716 38.7856 15.4276 38.9435 15.8084C39.1186 16.2318 39.0931 16.6893 38.9117 17.0725V17.0725Z" fill="black"/>
+                            </svg>
+                        </i>
+                        <i className="trash">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32.2575 19.7832H17.7418C17.4131 19.7832 17.1453 20.0511 17.1453 20.3797V35.0947C17.1453 35.4234 17.4131 35.6913 17.7418 35.6913H32.2575C32.5862 35.6913 32.8541 35.4234 32.8541 35.0947V20.3797C32.8541 20.0505 32.5862 19.7832 32.2575 19.7832ZM20.8242 33.5037C20.8242 33.833 20.5569 34.1003 20.2276 34.1003C19.8983 34.1003 19.6311 33.833 19.6311 33.5037V22.1694C19.6311 21.8401 19.8983 21.5728 20.2276 21.5728C20.5569 21.5728 20.8242 21.8401 20.8242 22.1694V33.5037ZM23.2103 33.5037C23.2103 33.833 22.9431 34.1003 22.6138 34.1003C22.2845 34.1003 22.0172 33.833 22.0172 33.5037V22.1694C22.0172 21.8401 22.2845 21.5728 22.6138 21.5728C22.9431 21.5728 23.2103 21.8401 23.2103 22.1694V33.5037ZM25.5965 33.5037C25.5965 33.833 25.3293 34.1003 25 34.1003C24.6707 34.1003 24.4034 33.833 24.4034 33.5037V22.1694C24.4034 21.8401 24.6707 21.5728 25 21.5728C25.3293 21.5728 25.5965 21.8401 25.5965 22.1694V33.5037ZM27.9827 33.5037C27.9827 33.833 27.7154 34.1003 27.3862 34.1003C27.0563 34.1003 26.7896 33.833 26.7896 33.5037V22.1694C26.7896 21.8401 27.0563 21.5728 27.3862 21.5728C27.7154 21.5728 27.9827 21.8401 27.9827 22.1694V33.5037ZM30.3689 33.5037C30.3689 33.833 30.1016 34.1003 29.7723 34.1003C29.4424 34.1003 29.1758 33.833 29.1758 33.5037V22.1694C29.1758 21.8401 29.4424 21.5728 29.7723 21.5728C30.1016 21.5728 30.3689 21.8401 30.3689 22.1694V33.5037Z" fill="#DC3545"/>
+                                <path d="M32.2576 14.6356H27.9822C27.6529 14.6356 27.3857 14.3684 27.3857 14.0391V13.5189C27.3857 13.1902 27.1178 12.9224 26.7891 12.9224H23.2098C22.8812 12.9224 22.6133 13.1902 22.6133 13.5189V14.0391C22.6133 14.3684 22.3461 14.6356 22.0168 14.6356H17.7413C17.4126 14.6356 17.1448 14.9035 17.1448 15.2322V15.9051C17.1448 16.2338 17.4126 16.5016 17.7413 16.5016H32.257C32.5857 16.5016 32.8536 16.2338 32.8536 15.9051V15.2322C32.8542 14.9035 32.5863 14.6356 32.2576 14.6356Z" fill="#DC3545"/>
+                                <path d="M25 0C11.1924 0 0 11.193 0 25.0006C0 38.8082 11.193 50 25 50C38.807 50 50 38.8076 50 25.0006C50 11.193 38.807 0 25 0ZM34.0472 35.0941C34.0472 36.0802 33.2442 36.8838 32.2576 36.8838H17.7418C16.7552 36.8838 15.9522 36.0802 15.9522 35.0941V20.3798C15.9522 19.3931 16.7552 18.5901 17.7418 18.5901H32.2576C33.2442 18.5901 34.0472 19.3931 34.0472 20.3798V35.0941ZM34.0472 15.9057C34.0472 16.8924 33.2442 17.6953 32.2576 17.6953H17.7418C16.7552 17.6953 15.9522 16.8924 15.9522 15.9057V15.2328C15.9522 14.2461 16.7552 13.4431 17.7418 13.4431H21.4219C21.4619 12.4916 22.2487 11.7299 23.2098 11.7299H26.789C27.7495 11.7299 28.5375 12.4916 28.5769 13.4431H32.257C33.2431 13.4431 34.0466 14.2461 34.0466 15.2328L34.0472 15.9057Z" fill="#DC3545"/>
+                            </svg>
+                        </i>
+                        <i className="edit">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path className="edit-svg" d="M50 25C50 38.8073 38.8073 50 25 50C11.1927 50 0 38.8073 0 25C0 11.1927 11.1927 0 25 0C38.8073 0 50 11.1927 50 25Z" fill="#FFC107"/>
+                                <path d="M39.8537 10.1463C38.562 8.855 36.845 8.14355 35.0185 8.14355C33.1921 8.14355 31.4751 8.855 30.1834 10.1463L11.525 28.8051C11.3464 28.9836 11.2171 29.2049 11.1496 29.4483L8.21839 39.9772C8.07648 40.4876 8.22106 41.035 8.5968 41.4085C8.87528 41.6854 9.24797 41.835 9.62982 41.835C9.76334 41.835 9.898 41.8167 10.03 41.7793L20.5593 38.7885C21.0583 38.6466 21.4455 38.2511 21.5763 37.749C21.7072 37.2466 21.5626 36.7126 21.1964 36.3452L14.6721 29.8011L29.9107 14.5622L35.4343 20.0862L23.7083 31.7798C23.1358 32.3512 23.1342 33.2786 23.7057 33.8516C24.2771 34.4245 25.2045 34.4257 25.7774 33.8542L39.8537 19.8165C41.1453 18.5249 41.8564 16.8079 41.8564 14.9814C41.8564 13.1549 41.1449 11.4379 39.8537 10.1463V10.1463ZM17.3637 36.6504L11.7413 38.2476L13.316 32.59L17.3637 36.6504ZM37.7834 17.7432L37.5088 18.0171L31.982 12.4908L32.2552 12.218C32.9933 11.4799 33.9745 11.0732 35.0185 11.0732C36.0626 11.0732 37.0438 11.4799 37.7819 12.218C38.52 12.9562 38.9267 13.9373 38.9267 14.9814C38.9267 16.0251 38.52 17.0066 37.7834 17.7432Z" fill="white"/>
+                            </svg>
+                        </i>
+                        <i className="add">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path className="add-svg" d="M25 0C11.2144 0 0 11.2144 0 25C0 38.7856 11.2144 50 25 50C38.7856 50 50 38.7856 50 25C50 11.2144 38.7856 0 25 0Z" fill="#28A745"/>
+                                <path d="M35.9375 27.0832H27.0832V35.9374C27.0832 37.0876 26.1501 38.0207 25 38.0207C23.8498 38.0207 22.9167 37.0876 22.9167 35.9374V27.0832H14.0625C12.9123 27.0832 11.9792 26.1501 11.9792 25C11.9792 23.8498 12.9123 22.9167 14.0625 22.9167H22.9167V14.0625C22.9167 12.9123 23.8498 11.9792 25 11.9792C26.1501 11.9792 27.0832 12.9123 27.0832 14.0625V22.9167H35.9375C37.0876 22.9167 38.0207 23.8498 38.0207 25C38.0207 26.1501 37.0876 27.0832 35.9375 27.0832V27.0832Z" fill="#FAFAFA"/>
+                            </svg>
+                        </i>
                     </div>
                     <div className="form-box">
-
+                        <form>
+                            <div style={{display:"flex",justifyContent:"space-between",margin: "30px 0"}}>
+                                <div className="form-group">
+                                    <input required type="text"/>
+                                    <label>Product Name</label>
+                                </div>
+                                <div className="form-group">
+                                    <input required type="text"/>
+                                    <label>Packaging</label>
+                                </div>
+                            </div>
+                            <div className="form-groups">
+                                    <input required type="text"/>
+                                    <label>Product Name</label>
+                            </div>
+                            <div className="form-groups">
+                                <textarea placeholder="Product Description"></textarea>
+                            </div>
+                            <div className="form-groups">
+                                <select defaultValue={`Product Category`}>
+                                    <option>Product Category</option>
+                                </select>
+                            </div>
+                            <div style={{display:"flex",justifyContent:"space-between",margin: "30px 0"}}>
+                                <div className="form-group">
+                                    <input required type="date"/>
+                                </div>
+                                <div className="form-group">
+                                    <input required type="text"/>
+                                    <label>Packaging</label>
+                                </div>
+                            </div>
+                            <div style={{display:"flex",justifyContent:"space-between",margin: "30px 0"}}>
+                                <div className="form-group">
+                                    <input required type="text"/>
+                                    <label>Product Name</label>
+                                </div>
+                                <div className="form-group">
+                                    <input required type="text"/>
+                                    <label>Packaging</label>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
+            <div className={modal === true ? "global-shadow":""}></div>
+            <div className={modal === true ? "modal-box show-modal":"modal-box"}>
+                <form>
+                    <div className="category-action">
+                        <i className="back">
+                            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.5829 13.7987C23.2401 9.36751 18.9782 6.34356 13.8696 6.25374V1.0741C13.8696 0.834581 13.6653 0.625 13.4318 0.625C13.3442 0.625 13.2566 0.65494 13.169 0.71482L0.178798 10.3555C-0.0255426 10.5052 -0.0547341 10.7747 0.0912236 10.9843C0.120415 11.0142 0.149607 11.0442 0.178798 11.0741L13.169 20.6549C13.3734 20.8046 13.6361 20.7448 13.7821 20.5651C13.8404 20.4753 13.8696 20.3855 13.8696 20.2957V15.146C17.0223 15.146 19.6787 16.6729 20.6129 18.9783C21.4011 20.9543 20.7588 23.0801 18.8906 24.8466C18.7154 25.0262 18.6862 25.2957 18.8614 25.4753C18.949 25.5651 19.0657 25.625 19.1825 25.625H19.5328C19.6204 25.625 19.7079 25.5951 19.7663 25.5352C24.0575 22.631 25.8965 18.11 24.5829 13.7987Z" fill="black"/>
+                            </svg>
+                        </i>
+                        <i className="save-category">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 0C5.60722 0 0 5.60722 0 12.5C0 19.3928 5.60722 25 12.5 25C19.3928 25 25 19.3928 25 12.5C25 5.60722 19.3928 0 12.5 0Z" fill="#2196F3"/>
+                                <path d="M17.9687 13.5417H13.5416V17.9688C13.5416 18.5439 13.075 19.0105 12.5 19.0105C11.9249 19.0105 11.4584 18.5439 11.4584 17.9688V13.5417H7.03123C6.45616 13.5417 5.98962 13.0752 5.98962 12.5001C5.98962 11.925 6.45616 11.4585 7.03123 11.4585H11.4584V7.03135C11.4584 6.45628 11.9249 5.98975 12.5 5.98975C13.075 5.98975 13.5416 6.45628 13.5416 7.03135V11.4585H17.9687C18.5438 11.4585 19.0103 11.925 19.0103 12.5001C19.0103 13.0752 18.5438 13.5417 17.9687 13.5417V13.5417Z" fill="#FAFAFA"/>
+                            </svg>
+                        </i>
+                    </div>
+                </form>
             </div>
         </>
     )
