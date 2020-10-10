@@ -88,20 +88,64 @@
     opacity: 0;
     position: absolute;
     pointer-events: none;
+    width: 50vh;
+    height: 50vh;
 }
 .show-modal {
     top: 30%;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 10px;
     position: absolute;
-    width: 50vh;
-    height: 50vh;
     pointer-events: all;
     opacity: 100%;
+}
+.category-action {
+    align-self: flex-start;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.category-action .back {
+    cursor: pointer;
+}
+.category-action .save-category {
+    cursor: pointer;
+}
+.form-modal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+}
+
+.csv,
+.excel,
+.pdf {
+    cursor: pointer;
+}
+
+.csv:hover path,
+.excel:hover path,
+.pdf:hover path {
+    fill: #ffb800;
+}
+
+.export-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-action .back svg:hover path {
+    fill: #252525;
+}
+.category-action .save-category svg:hover > .fill-svg {
+    fill: #3b99ff;
 }
 .button-form {
     margin:  1em 1rem 0 1rem;
