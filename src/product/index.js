@@ -134,18 +134,19 @@ export default function Index() {
                                     <input required type="date"/>
                                 </div>
                                 <div className="form-group">
-                                    <input required type="text"/>
-                                    <label>Packaging</label>
+                                    <select defaultValue={`Status`}>
+                                        <option>Status</option>
+                                    </select>
                                 </div>
                             </div>
                             <div style={{display:"flex",justifyContent:"space-between",margin: "30px 0"}}>
                                 <div className="form-group">
-                                    <input required type="text"/>
-                                    <label>Product Name</label>
+                                    <input required type="number"/>
+                                    <label>Buying Price</label>
                                 </div>
                                 <div className="form-group">
-                                    <input required type="text"/>
-                                    <label>Packaging</label>
+                                    <input required type="number"/>
+                                    <label>Selling Price</label>
                                 </div>
                             </div>
                         </form>
