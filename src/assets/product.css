@@ -1,5 +1,5 @@
 .product-content {
-    padding: 100px 16px;
+    padding: 70px 16px;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 1fr 1fr;
@@ -11,7 +11,7 @@
 }
 
 .product-list .list-box-container {
-    max-height: 450px;
+    max-height: 440px;
     overflow-y: auto;
 }
 
@@ -104,7 +104,7 @@
     opacity: 100%;
 }
 .button-form {
-    margin: 1em;
+    margin:  1em 1rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
