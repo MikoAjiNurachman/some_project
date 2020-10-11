@@ -31,16 +31,12 @@ export default function Register() {
             <textarea placeholder="Address"></textarea>
           </div>
           <div className="half-group-left">
-                <div className="form-group-left">
-                        <select name="principal">
-                            <option>Principal</option>
-                        </select>
-                </div>
-                <div className="form-group-left">
-                        <select name="distributor">
-                            <option>Distributor</option>
-                        </select>
-                </div>
+            <select name="principal">
+                <option>Principal</option>
+            </select>
+            <select name="distributor">
+                <option>Distributor</option>
+            </select>
           </div>
           <button className="center-register btn-primary">Register</button>
         </form>

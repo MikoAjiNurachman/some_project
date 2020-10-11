@@ -1,5 +1,6 @@
 .sales-container {
     padding-top: 5em;
+    position: relative;
     width: 100%;
     height: 100vh;
 }
@@ -12,15 +13,13 @@
     background-color: #ffffff;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.form-invoice,
 .list-invoice {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px;
-}
-.form-invoice {
-    margin: 20px;
-    background-color: green;
+    margin: 25px;
 }
 .list-title {
     font-size: 1.5rem;
@@ -35,7 +34,6 @@
     height: 350px;
     overflow: auto;
     font-size: .8rem;
-    text-align: center;
 }
 
 .list-box table {
@@ -48,17 +46,84 @@
 .list-box table thead tr th {
     background-color: #474646;
     color: #ffffff;
-    padding: .5em 1em;
+    padding: .5em 0;
 }
 
 .list-box table tbody tr {
     cursor: pointer;
+    text-align: center;
 }
 .list-box table tbody tr:hover {
     background-color: #dddddd;
 }
 
 .list-box table , th, td {
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+}
+.modal-shadow {
+    background-color: rgba(0, 0, 0, 0.55);
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+.form-header {
+    width: 60%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+.form-header-group {
+    display: flex;
+    justify-content: space-between;
+}
+.form-header-group > label {
+    font-size: 1rem;
+}
+.form-header-group > select,
+.form-header-group > input {
+    width: 60%;
+    padding: .1em 1em;
+    outline: none;
+}
+.form-header-group > select:focus,
+.form-header-group > input:focus {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 0 .15rem rgba(63, 132, 242, 0.55)
+ }
+.form-body {
+    height: 250px;
+} 
+.check-overflow {
+    background-color: green;
+    display: table-row-group;
+    height: 100px;
+    overflow: auto;
+}
+.table-item {
+    display: table;
+    width: 100%;
+}
+.table-item thead tr {
+    background-color: #474646;
+    color: #ffffff;
+}
+.table-item tbody {
+    height: 100px;
+}
+.table-item tbody tr td {
+    text-align: center;
+}
+.table-item tbody tr input,
+.table-item tbody tr select {
+    width: 100%;
+    outline: 0;
+    padding: .2em 1em;
+}
+.table-item , th , td {
     border: 1px solid #dddddd;
     border-collapse: collapse;
 }

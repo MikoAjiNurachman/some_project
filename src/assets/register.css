@@ -72,12 +72,14 @@
     left: 15%;    
 }
 .half-group-left {
+    width: 70%;
     display: flex;
-    width: 74%;
+    justify-content: space-between;
 }
-.form-group-left > select {
+.half-group-left select {
     padding: 0.4em 1.5em;
-    width: 90%;
+    width: 150px;
+    margin: 1em 0;
     outline: 0;
 }
 .center-register {

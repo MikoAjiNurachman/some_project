@@ -12,6 +12,7 @@ export default function Index() {
     }
     return (
         <>
+            <div className={modal === true ? "global-shadow":""}></div>
             <Headers active={active}/>
             <div className="product-content">
                 <div className="product-list">
@@ -154,7 +155,6 @@ export default function Index() {
                     </div>
                 </div>
             </div>
-            <div className={modal === true ? "global-shadow":""}></div>
             <div className={modal === true ? "modal-box show-modal":"modal-box"}>
                 <div className="category-action">
                     <i onClick={() => setModal((prevState) => !prevState)} className="back">

@@ -7,6 +7,9 @@
 body {
     background-color: #e6e6e6;
 }
+.container {
+    position: relative;
+}
 .brand {
     justify-self: flex-start;
     align-self: flex-start;
