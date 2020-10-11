@@ -118,10 +118,9 @@ export default function Index() {
                                 </select>
                             </div>
                         </div>
-                        <div className="form-body">
-                            <div className="list-title">
-                                <h3>Item</h3>
-                            </div>
+                        <div className="list-title">
+                            <h3>Item</h3>
+                        </div>
                             <table className="table-item">
                                 <thead>
                                     <tr>
@@ -132,7 +131,6 @@ export default function Index() {
                                         <th>Subtotal</th>
                                     </tr>
                                 </thead>
-                                <div className="check-overflow">
                                 <tbody>
                                     <tr>
                                         <td>
@@ -200,28 +198,59 @@ export default function Index() {
                                         <td>20000</td>
                                         <td>0</td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <select defaultValue="Select">
+                                                <option disabled>Select</option>
+                                            </select>
+                                        </td>
+                                        <td>Hatari</td>
+                                        <td><input type="number" defaultValue={0}/></td>
+                                        <td>20000</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select defaultValue="Select">
+                                                <option disabled>Select</option>
+                                            </select>
+                                        </td>
+                                        <td>Hatari</td>
+                                        <td><input type="number" defaultValue={0}/></td>
+                                        <td>20000</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select defaultValue="Select">
+                                                <option disabled>Select</option>
+                                            </select>
+                                        </td>
+                                        <td>Hatari</td>
+                                        <td><input type="number" defaultValue={0}/></td>
+                                        <td>20000</td>
+                                        <td>0</td>
+                                    </tr>
                                 </tbody>
-                            </div>
                                 <tfoot>
                                     <tr>
-                                        <td colSpan="3">Total Item</td>
+                                        <td className="cell-first" colSpan="3">Total Item</td>
                                         <td colSpan="2">0</td>
                                     </tr>
                                     <tr>
-                                        <td colSpan="3">Discount</td>
+                                        <td className="cell-first" colSpan="3">Discount</td>
                                         <td colSpan="2">0</td>
                                     </tr>
                                     <tr>
-                                        <td colSpan="3">Tax (10%)</td>
+                                        <td className="cell-first" colSpan="3">Tax (10%)</td>
                                         <td colSpan="2">0</td>
                                     </tr>
                                     <tr>
-                                        <td colSpan="3">Total</td>
+                                        <td className="cell-first" colSpan="3">Total</td>
                                         <td colSpan="2">0</td>
                                     </tr>
                                 </tfoot>
                             </table>
-                        </div>
                     </form>
                 </div>
             </div>

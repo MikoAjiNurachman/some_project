@@ -94,28 +94,37 @@
     border: 1px solid #007BFF;
     box-shadow: 0 0 0 .15rem rgba(63, 132, 242, 0.55)
  }
-.form-body {
-    height: 250px;
-} 
-.check-overflow {
-    background-color: green;
-    display: table-row-group;
-    height: 100px;
-    overflow: auto;
-}
 .table-item {
     display: table;
-    width: 100%;
+    width: 716px;
+}
+
+.table-item > tfoot, 
+.table-item > tbody, 
+.table-item > thead tr {
+    display: block;
 }
 .table-item thead tr {
     background-color: #474646;
     color: #ffffff;
 }
-.table-item tbody {
-    height: 100px;
+.table-item > tbody {
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-.table-item tbody tr td {
-    text-align: center;
+.table-item > tfoot tr td {
+    width: 296px;
+}
+.table-item > tfoot tr .cell-first {
+    width: 420px;
+}
+.table-item > tbody tr td,
+.table-item > thead tr th {
+    width: 140px;
+}
+.table-item > thead tr th:last-child {
+    width: 156px;
 }
 .table-item tbody tr input,
 .table-item tbody tr select {
