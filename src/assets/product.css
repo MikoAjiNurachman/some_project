@@ -11,7 +11,7 @@
 }
 
 .product-list .list-box-container {
-    max-height: 440px;
+    height: 435px;
     overflow-y: auto;
 }
 
@@ -49,7 +49,7 @@
 .product-list .list-box {
     background-color: #252525;
     width: 100%;
-    /* max-height: 95%; */
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
