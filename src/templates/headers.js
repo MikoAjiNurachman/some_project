@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./../assets/header.css";
 
-export default function headers() {
+export default function headers({active}) {
   return (
     <div className="header">
       <h1 className="header-brand">
@@ -10,18 +10,16 @@ export default function headers() {
         <div className="f2">chief</div>
       </h1>
       <ul className="header-list">
-        <li>
-          <Link to="">Product</Link>
-        </li>
-        <li>
-          <Link to="">Sales</Link>
-        </li>
-        <li>
-          <Link to="">Report</Link>
-        </li>
-        <li>
-          <Link to="">Dashboard</Link>
-        </li>
+      <Link to="/app/product">
+        <li className={active === 'product' ? "active" : ""}>Product</li>
+      </Link>
+        <Link to="/app/sales">
+          <li className={active === 'sales' ? "active" : ""}>Sales</li>
+        </Link>
+
+        <Link to="/app/dashboard">
+          <li className={active === 'dashboard' ? "active" : ""}>Dashboard</li>
+        </Link>
       </ul>
       <div className="user-content">
         <div className="user-icon">

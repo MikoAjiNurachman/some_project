@@ -1,0 +1,64 @@
+.sales-container {
+    padding-top: 5em;
+    width: 100%;
+    height: 100vh;
+}
+.sales-box {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    height: 93%;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.list-invoice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+}
+.form-invoice {
+    margin: 20px;
+    background-color: green;
+}
+.list-title {
+    font-size: 1.5rem;
+}
+.export {
+    cursor: pointer;
+}
+.export:hover svg path {
+    fill: #ffb800;
+}
+.list-box {
+    height: 350px;
+    overflow: auto;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.list-box table {
+    display: table;
+    width: 100%;   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.list-box table thead tr th {
+    background-color: #474646;
+    color: #ffffff;
+    padding: .5em 1em;
+}
+
+.list-box table tbody tr {
+    cursor: pointer;
+}
+.list-box table tbody tr:hover {
+    background-color: #dddddd;
+}
+
+.list-box table , th, td {
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+}

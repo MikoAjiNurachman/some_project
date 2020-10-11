@@ -3,6 +3,7 @@ import Headers from './../templates/headers'
 import './../assets/product.css'
 
 export default function Index() {
+    const active = 'product'
     const [modal,setModal] = useState(false)
     const [cmodal,setCmodal] = useState('')
     const showModal = (c) => {
@@ -11,7 +12,7 @@ export default function Index() {
     }
     return (
         <>
-            <Headers/>
+            <Headers active={active}/>
             <div className="product-content">
                 <div className="product-list">
                     <form className="search-box">

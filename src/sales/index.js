@@ -1,0 +1,229 @@
+import React from 'react'
+import Headers from '../templates/headers'
+import './../assets/sales.css'
+
+export default function Index() {
+    const active = 'sales'
+    return (
+        <>
+            <Headers active={active}/>
+            <div className="sales-container">
+                <div className="sales-box">
+                    <div className="list-invoice">
+                        <div className="list-title">
+                            <h3>Sales Invoice</h3>
+                        </div>
+                        <div className="button-group">
+                            <i className="export">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0ZM39.0625 33.5938C39.0625 36.1784 36.9597 38.2812 34.375 38.2812H17.1875C14.6028 38.2812 12.5 36.1784 12.5 33.5938V16.4062C12.5 13.8216 14.6028 11.7188 17.1875 11.7188H25C25.8629 11.7188 26.5625 12.4184 26.5625 13.2812C26.5625 14.1441 25.8629 14.8438 25 14.8438H17.1875C16.326 14.8438 15.625 15.5447 15.625 16.4062V33.5938C15.625 34.4553 16.326 35.1562 17.1875 35.1562H34.375C35.2365 35.1562 35.9375 34.4553 35.9375 33.5938V25.7812C35.9375 24.9184 36.6371 24.2188 37.5 24.2188C38.3629 24.2188 39.0625 24.9184 39.0625 25.7812V33.5938ZM38.9117 17.0725C38.7475 17.4205 38.8043 17.3115 35.4798 20.6361C35.1747 20.9412 34.7749 21.0938 34.375 21.0938C32.9955 21.0938 32.2831 19.4135 33.2702 18.4265L33.6966 18.0001C29.7054 18.3453 26.5625 21.7021 26.5625 25.7812C26.5625 26.6441 25.8629 27.3438 25 27.3438C24.1371 27.3438 23.4375 26.6441 23.4375 25.7812C23.4375 19.9613 28.0068 15.1892 33.7463 14.8622L33.2701 14.386C32.6599 13.7759 32.6599 12.7865 33.2701 12.1764C33.8803 11.5661 34.8696 11.5661 35.4798 12.1764C38.875 15.5716 38.7856 15.4276 38.9435 15.8084C39.1186 16.2318 39.0931 16.6893 38.9117 17.0725V17.0725Z" fill="black"/>
+                                </svg>
+                            </i>
+                        </div>
+                        <div className="list-box">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Customer</th>
+                                        <th>Gross Amount</th>
+                                        <th>Discount</th>
+                                        <th>Tax</th>
+                                        <th>Invoice</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-10-11</td>
+                                        <td>Anonymous</td>
+                                        <td>1000000</td>
+                                        <td>200000</td>
+                                        <td>300000</td>
+                                        <td>120000</td>
+                                        <td>paid</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div className="form-invoice">
+
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
