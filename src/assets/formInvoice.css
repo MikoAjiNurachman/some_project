@@ -1,0 +1,180 @@
+.detail-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-content-left {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+}
+
+.breadcumb {
+    display: flex;
+    align-items: center;  
+    width: 30%;
+}
+.breadcumb-formInvoice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.2em;
+    width: 10%;
+}
+
+.breadcumb-formInvoice i {
+    cursor: pointer;
+}
+
+.breadcumb-formInvoice i:hover svg .edit-svg,
+.breadcumb-formInvoice i:hover svg .save-svg,
+.breadcumb-formInvoice i:hover svg .add-svg,
+.breadcumb-formInvoice i:hover .delete-svg path {
+    fill: var(--color1);
+}
+
+.table-container {
+    margin-left: 2%;
+    align-self: flex-start;
+    width: 96.5%;
+    height: 400px;
+    overflow: auto;
+}
+
+.table-container input {
+    width: 70px;
+    outline: 0;
+    padding: .6em;
+    border-radius: 5px;
+    border: .1px solid #858585;
+}
+
+.table-container input:hover {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 0 .08em #007bff;
+}
+
+.detail-content-left table {
+    width: 100%;
+    display: table;
+}
+
+.detail-content-left table tfoot tr td {
+    padding: 1em;
+    font-weight: bold;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.detail-content-left table thead tr {
+    background-color: #252525;
+    text-align: left;
+    color: var(--color1);
+}
+
+.detail-content-left table thead tr th {
+    padding: .8em .2em;
+    border: 1px solid #dddddd;
+}
+
+.detail-content-left table tbody {
+    background-color: #d1d1d1;
+}
+
+.detail-content-left table tbody tr td {
+    padding: .2em;
+    width: 100px;
+    text-align: center;
+}
+
+.detail-content-left table tbody tr td:last-child {
+    background-color: #fff;
+    width: 25px;
+    border: none;
+}
+
+.contentDelete {
+    width: 100%;
+    cursor: pointer;
+}
+
+.contentDelete:hover .cancel-svg{
+    fill: #ffb800;
+}
+
+.detail-content-left table , th, td {
+    border: 1px solid #dddddd;
+    border-right: none;
+    border-collapse: collapse;
+}
+.named {
+    width: 160px;
+}
+
+.product-code {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.product-code .select {
+    width: 160px;
+}
+
+.detail-content-right {
+    align-self: flex-start;
+    width: 30%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.detail-content-right .detail-form-group {
+    display: flex;
+    margin: .325em 0;
+    width: 100%;
+}
+
+.detail-content-right .detail-form-group label {
+    width: 5rem;
+    padding: .2em;
+}
+
+.detail-content-right .detail-form-group select,
+.detail-content-right .detail-form-group input {
+    width: 60%;
+    padding: 0 .2em;
+    background-color: #f1f1f1;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+
+.detail-content-right .detail-form-group select:focus,
+.detail-content-right .detail-form-group input:focus {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 0 .15rem rgba(63, 132, 242, 0.55)
+}
+
+.button-group-form {
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-group-form i {
+    cursor: pointer;
+}
+
+.button-group-form .breadcumb .list-title-form {
+    align-self: flex-start;
+    width: max-content;
+    font-size: 1.5rem;
+    margin: 1rem 3rem;
+}

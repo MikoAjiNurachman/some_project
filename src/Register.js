@@ -1,15 +1,132 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import uid from 'uid'
 import "./assets/register.css";
 
 export default function Register() {
+  const history = useHistory()
+  const [principal,setPrincipal] = useState([])
+  const [distributor, setDistributor] = useState([])
+  const [user, setUser] = useState([])
+  useEffect(() => {
+      async function fetching() {
+        const fetchingPrincipal = await fetch('http://localhost:8080/getPrincipal/')
+        const data = await fetchingPrincipal.json()
+        const fetchingDistributor = await fetch('http://localhost:8080/getDistributor/')
+        const data1 = await fetchingDistributor.json()
+        const fetchingUser = await fetch('http://localhost:8080/getUsers/')
+        const data2 = await fetchingUser.json()
+        setPrincipal(data)
+        setDistributor(data1) 
+        setUser(data2)
+      }
+      fetching()
+  },[]) 
+  const registerU = (e) => {
+    e.preventDefault()
+    function reset() {
+      e.target.username.value = ""
+      e.target.password.value = ""
+      e.target.email.value = ""
+      e.target.phone.value = ""
+      e.target.address.value = ""
+      e.target.principal.value = "Principal"
+      e.target.distributor.value = "Distributor"
+    }
+    let regexEmail = /[a-z A-Z].*@[a-z].*\.[a-z]+/
+    let regPhone = /.+62.[0-9].{8,15}$/
+    let regexPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,100}$/
+      if (regPhone.test(e.target.phone.value) === false) {
+        e.target.phone.value = ""
+        return toast.dark('Phone Number must have "+62" and at least 13 character format for this region !', {
+          position: "top-right",
+          closeButton: true,
+          closeOnClick: true,
+          progress: undefined,
+          hideProgressBar: true          
+        })
+      }
+      if (regexPassword.test(e.target.password.value) === false) {
+        e.target.password.value = ""
+        toast.dark('Password must be contain at least word,Uper Case,Number, and Special Character !', {
+          position: "top-right",
+          closeButton: true,
+          closeOnClick: true,
+          progress: undefined,
+          hideProgressBar: true
+        })
+      }
+      if (regexEmail.test(e.target.email.value) === false) {
+        e.target.email.value = ""
+        toast.dark('Email Invalid !', {
+        position: "top-right",
+        closeButton: true,
+        closeOnClick: true,
+        progress: undefined,
+        hideProgressBar: true
+      })
+    } else {
+      const data = JSON.stringify({
+        user_id: uid(),
+        username: e.target.username.value,
+        password: e.target.password.value,
+        email: e.target.email.value,
+        phone: e.target.phone.value,
+        address: e.target.address.value,
+        principal: e.target.principal.value, 
+        distributor: e.target.distributor.value 
+      })
+      const checkUser = user.find(element => element.email === e.target.email.value)
+      if (checkUser === undefined) {
+        fetch('http://localhost:8080/register/', {
+          method: 'POST',
+          body: data,
+          headers: {'Content-Type': 'application/json'}
+        })
+        .then(resp => resp.json())
+        .then(res => {
+          if (res.status === 200) {
+            toast.success('Register Success !',
+            {
+             progress: undefined,
+             position: "top-right",
+             closeButton: true,
+             closeOnClick: true,
+             hideProgressBar: true
+            })
+            history.push('/')
+          } else {
+            toast.warn('Register Failed !',
+            {
+             progress: undefined,
+             position: "top-right",
+             closeButton: true,
+             closeOnClick: true,
+             hideProgressBar: true
+            })
+          }
+        })
+        reset()
+      } else {
+        toast.warn('Email already exist !', {
+          position: "top-right",
+          closeButton: true,
+          closeOnClick: true,
+          progress: undefined,
+          hideProgressBar: true
+        })
+      }
+    }
+  }
   return (
     <div className="register-fluid">
       <div className="register-content">
-        <div>
+        <div className="form-register">
         <h2 className="brand-start">
         <span>Nex</span>chief
         </h2>
-        <form className="register-box">
+        <form className="register-box" onSubmit={registerU}>
         <h5 className="register-brand">Register</h5>
           <div className="form-group-left">
             <input required type="text" name="username" />
@@ -24,21 +141,39 @@ export default function Register() {
             <label>Email</label>
           </div>
           <div className="form-group-left">
-            <input required type="number" name="phone" />
+            <input required type="text" name="phone" />
             <label>Phone</label>
           </div>
           <div className="form-group-left">
-            <textarea placeholder="Address"></textarea>
+            <textarea name="address" placeholder="Address"></textarea>
           </div>
           <div className="half-group-left">
-            <select name="principal">
-                <option>Principal</option>
+            <select required defaultValue="Principal" name="principal">
+                <option disabled>Principal</option>
+                {principal.map(element => (
+                <option key={element.principal_id} value={element.principal_id}>{element.principal_name}</option>
+                ))}
             </select>
-            <select name="distributor">
-                <option>Distributor</option>
-            </select>
+            <select required defaultValue="Distributor" name="distributor">
+                <option disabled>Distributor</option>
+                {distributor.map(element => (
+                <option key={element.distributor_id} value={element.distributor_id}>{element.distributor_name}</option>
+                ))}
+              </select>
           </div>
-          <button className="center-register btn-primary">Register</button>
+          <button type="submit" className="center-register btn-primary">Register</button>
+          <small>Have an Account ? <Link style={{textDecoration: "none",fontSize: "1rem"}} to="/">Login</Link></small>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={true}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </form>
         </div>
         <div className="img-register">
@@ -228,7 +363,7 @@ export default function Register() {
             />
           </svg>
           <div className="register-quote">
-                <h2>Growth up together with Us</h2>
+                <h2 style={{fontSize: "1.4rem"}}>Growth up together with Us</h2>
           </div>
         </div>
       </div>

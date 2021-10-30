@@ -1,0 +1,37 @@
+.pagination-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 80%;
+    /* overflow: auto; */
+}
+
+
+.box-pagination-info {
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 40px;
+    border: 1px solid #858585;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #3d3d3d;
+}
+
+.box-pagination {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 40px;
+    border: 1px solid #858585;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #3d3d3d;
+}
+
+.active-page {
+    background-color: var(--color1);
+}

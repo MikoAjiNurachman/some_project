@@ -1,0 +1,75 @@
+.content-export-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    margin: 2em 3em;
+}
+
+.table-container-export {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-container-export .table-export {
+    display: table;
+    width: 100%;
+}
+
+.table-export caption {
+    font-size: 36px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.table-export thead tr th {
+    width: max-content;
+    padding: .5em .3em;
+}
+
+.table-export tbody tr td {
+    text-align: center;
+    padding: .4em .1em;
+}
+
+.table-export,.table-export th,.table-export td {
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+.button-group-export {
+    margin: 2em 3em;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+.button-group-export .subButtonExport,
+.button-export-back,
+.button-export {
+    cursor: pointer;
+    color: #ffff;
+    outline: none;
+    border: none;
+    padding: .8em 1em;
+    border-radius: 5px;
+}
+.pdf {
+    background-color: #db3c30;
+}
+.excel {
+    background-color: #24ad6b;
+}
+.csv {
+    background-color: #28a745;
+}
+.button-export-back {
+    background-color: grey;
+}
+.subButtonExport:hover,
+.button-export-back:hover,
+.button-export:hover {
+    background-color: var(--color1);
+}

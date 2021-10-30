@@ -3,17 +3,16 @@
     font-size: 36px;
 }
 .brand-start > span {
-    color: #ffb800;
+    color: var(--color1);
 }
 .register-fluid {
-    padding-top: 1px;
     padding-bottom: 50px;    
     background-color: #ffffff;
     height: 100vh;
 }
 .register-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 .register-brand {
     font-size: 24px;
@@ -38,7 +37,7 @@
     margin: 10px 5rem;
     flex-direction: column;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: .5px .5px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: #ffffff;
 }
@@ -62,6 +61,7 @@
 .form-group-left > textarea {
     width: 70%;
     height: 5em;
+    font-size: 1rem;
     outline: 0;
     resize: none;
 }
@@ -78,15 +78,13 @@
 }
 .half-group-left select {
     padding: 0.4em 1.5em;
-    width: 150px;
+    width: 45%;
     margin: 1em 0;
+    font-size: 1rem;
     outline: 0;
 }
-.center-register {
-    margin: 20px 0;
-}
 .register-quote {
-    padding-top: 2vh;
+    padding-top: 15px;
     background-color: #ffffff;
     text-align: center;
     width: 100%;
